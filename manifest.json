@@ -1,0 +1,26 @@
+{
+    "name": "Tiberium Plugin",
+    "version": "0.0.1",
+    "description": "Some UI extensions.",
+    "icons": {
+        "128": "/i/icon-128.png",
+        "48": "/i/icon-48.png"
+    },
+    "background": { "scripts": ["/js/background.js"] },
+    "content_scripts": [
+        {
+            "matches": ["http://prodgame03.alliances.commandandconquer.com/*"],
+            "js": ["/js/libs/jquery.min.js",
+                "/js/inject.js",
+                "/js/main.js"]
+        }
+    ],
+    "page_action": {
+        "default_icon": "i/icn_res_tiberium.png",
+        "default_title": "Collect all bonuses"
+    },
+    "permissions": [
+        "http://prodgame03.alliances.commandandconquer.com/*",
+        "tabs"
+    ]
+}
